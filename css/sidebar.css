@@ -1,0 +1,154 @@
+/* サイドバー共通スタイル */
+.sidebar {
+    position: fixed;
+    top: 25px;
+    width: 200px; /* サイドバーの幅を120pxに調整 */
+    height: 100%; /* サイドバーの高さを画面いっぱいに設定 */
+    background: transparent; /* 背景色を白に設定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* サイドバー外の要素がはみ出ないようにする */
+    z-index: 10; /* 他の要素の上に表示されるように調整 */
+}
+
+.left-sidebar {
+    left: 0;
+}
+
+.right-sidebar {
+    right: 0;
+}
+
+/* 円のスタイル */
+.circle {
+    --c1: #f2c4e2;
+    --c2: #d97eb9;
+    --size: 80px; /* 円のサイズを80pxに設定 */
+    --delay: 0s;
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: radial-gradient(circle at 20% 70%, var(--c1), var(--c2));
+    pointer-events: none;
+    animation: drift 6s var(--delay) linear infinite;
+    animation-play-state: running;
+}
+
+/* 各円の配置とカラー */
+.circle:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    --c1: #f2c4e2; /* ピンク */
+    --c2: #d97eb9;
+    --delay: 0s;
+    --size: 20px; /* サイズを個別に設定可能 */
+}
+
+.circle:nth-child(2) {
+    top: 30%;
+    left: 40%;
+    --c1: #194aa6; /* 濃いブルー */
+    --c2: #194aa6;
+    --delay: 1s;
+    --size: 20px; /* サイズを個別に設定可能 */
+}
+
+.circle:nth-child(3) {
+    top: 50%;
+    left: 60%;
+    --c1: #a0e3f2; /* 明るいブルー */
+    --c2: #2fa7c2;
+    --delay: 2s;
+    --size: 20px;
+}
+
+.circle:nth-child(4) {
+    top: 70%;
+    left: 80%;
+    --c1: #f0b400; /* ゴールド */
+    --c2: #e08b00;
+    --delay: 3s;
+    --size: 20px;
+}
+
+.circle:nth-child(5) {
+    top: 90%;
+    left: 50%;
+    --c1: #1dcad3; /* エメラルドグリーン */
+    --c2: #178d94;
+    --delay: 4s;
+    --size: 20px;
+}
+
+.circle:nth-child(6) {
+    top: 20%;
+    left: 70%;
+    --c1: #ff7a59; /* オレンジ */
+    --c2: #d95335;
+    --delay: 5s;
+    --size: 20px;
+}
+/* 7つ目の円 */
+.circle:nth-child(7) {
+    top: 40%;         /* 垂直方向の配置 */
+    left: 30%;        /* 水平方向の配置 */
+    --c1: #00c853;    /* ライムグリーン */
+    --c2: #009624;
+    --delay: 6s;      /* アニメーション遅延 */
+    --size: 20px;    /* サイズ */
+}
+
+/* 8つ目の円 */
+.circle:nth-child(8) {
+    top: 10%;         /* 垂直方向の配置 */
+    left: 90%;        /* 水平方向の配置 */
+    --c1: #ff5722;    /* 明るいオレンジ */
+    --c2: #e64a19;
+    --delay: 8s;      /* アニメーション遅延 */
+    --size: 20px;    /* サイズ */
+}
+
+/* 9つ目の円 */
+.circle:nth-child(9) {
+    top: 20%;         /* 垂直方向の配置 */
+    left: 15%;        /* 水平方向の配置 */
+    --c1: #ffeb3b;    /* 明るい黄色 */
+    --c2: #fbc02d;
+    --delay: 9s;      /* アニメーション遅延 */
+    --size: 20px;    /* サイズ */
+}
+
+/* 10つ目の円 */
+.circle:nth-child(10) {
+    top: 75%;         /* 垂直方向の配置 */
+    left: 50%;        /* 水平方向の配置 */
+    --c1: #8e44ad;    /* 紫色 */
+    --c2: #6c3483;
+    --delay: 10s;     /* アニメーション遅延 */
+    --size: 30px;    /* サイズ */
+}
+
+/* 11つ目の円 */
+.circle:nth-child(11) {
+    top: 5%;          /* 垂直方向の配置 */
+    left: 80%;        /* 水平方向の配置 */
+    --c1: #3498db;    /* 青色 */
+    --c2: #2e86c1;
+    --delay: 11s;     /* アニメーション遅延 */
+    --size: 20px;    /* サイズ */
+}
+
+/* アニメーション */
+@keyframes drift {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-20px) translateX(20px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}

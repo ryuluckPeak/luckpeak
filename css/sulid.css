@@ -1,0 +1,124 @@
+/* ヘッダー全体のスタイル */
+.header {
+    position: fixed; /* スクロールしても固定表示 */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff; /* 背景色を白色に設定 */
+    padding: 10px 20px;
+    z-index: 10; /* 他の要素より前に表示されるように */
+    display: flex;
+    align-items: center; /* コンテンツを縦中央に配置 */
+    justify-content: space-between; /* ロゴと会社名を左右に配置 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 少し影を付けてヘッダーが目立つように */
+}
+
+/* ハンバーガーメニューのスタイル */
+.hamburger {
+    position: fixed; /* ヘッダーと同じように固定 */
+    top: 10px; /* 上からの位置を調整 */
+    right: 20px; /* 右からの位置を調整 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 2000; /* 他の要素より前に表示 */
+}
+
+.hamburger__line {
+    background-color: #333; /* ハンバーガーメニューのアイコンの色をダークグレーに設定 */
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+/* ロゴのスタイル */
+.logo {
+    height: 50px; /* ロゴの高さ */
+    width: auto;
+}
+
+/* 会社名のスタイル */
+.company-name {
+    font-size: 24px;
+    color: #333; /* 文字色をダークグレーに変更 */
+    font-weight: bold;
+}
+
+/* スライドショーに必要な余白を追加 */
+.slideshow-zoom {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 70px; /* ヘッダーの高さ分だけ余白を追加 */
+}
+
+.slideshow-zoom li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: none; /* 初期状態で非表示 */
+    animation: zooming 12s infinite;
+}
+
+.slideshow-zoom li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 画像の上に表示する文字（全スライドに共通で表示） */
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 100;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 80%;  /* 幅を指定してテキストが画像内に収まるようにする */
+}
+
+/* アニメーションの遅延 */
+.slideshow-zoom li:nth-child(1) { animation-delay: 0s; }
+.slideshow-zoom li:nth-child(2) { animation-delay: 3s; }
+.slideshow-zoom li:nth-child(3) { animation-delay: 6s; }
+.slideshow-zoom li:nth-child(4) { animation-delay: 9s; }
+
+/* アニメーション定義 */
+@keyframes zooming {
+    0% { z-index: 1; opacity: 0; transform: scale(1); }
+    10% { z-index: 10; opacity: 1; transform: scale(1.2); }
+    90% { z-index: 10; opacity: 1; transform: scale(1.2); }
+    100% { z-index: 1; opacity: 0; transform: scale(1); }
+}
+
+/* スマホ用メディアクエリ */
+@media screen and (max-width: 768px) {
+    .slideshow-zoom {
+        max-width: 100%;
+        height: 300px;
+        margin-top: 60px; /* ヘッダーの高さ分だけ余白を追加 */
+    }
+
+    .caption {
+        font-size: 18px;
+    }
+
+    /* ハンバーガーメニューのサイズ調整 */
+    .hamburger {
+        width: 25px;
+        height: 18px;
+    }
+}

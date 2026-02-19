@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会員登録</title>
+    <link rel="stylesheet" href="css/careers.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="video/8.mp4" type="video/mp4">
+            お使いのブラウザは動画に対応していません。
+        </video>
+    </div>
+    <form action="send_Recruitment_mail.php" method="post" id="recruitment-form">
+        
+        <div class="image-item">
+            <img src="img/win-text.jpg" alt="win-win">
+            <p class="image-text" id="core-task">コア業務に集中が出来ない・・</p>
+        </div>
+
+        <p id="text-1">仕事終わりの時間を、ただ過ごすだけではもったいない。あなたの得意分野やスキルを活かし、社会に価値を提供しませんか？今すぐ会員登録して、新しい可能性への一歩を踏み出しましょう。</p>
+       
+        <p id="text-2">終業後の2時間が、あなたの人生を変える時間になるかもしれません。ただの余暇ではなく、あなたのスキルで誰かの役に立つ時間へ。社会に貢献し、自分自身も成長できる場がここにあります。今すぐ会員登録を！</p>
+        
+        <p id="text-3">忙しい日常の中でも、終業後のわずかな時間を有効に活用することで、あなたの持つ知識や経験は誰かの助けになります。得意分野を活かして社会に貢献する、そんな充実感を味わえる場へ、ぜひご参加ください。</p>
+
+        <p id="text-4">仕事の後の時間、もっと有意義に使えたら…』そんな想いはありませんか？あなたが培ってきたスキルや経験は、きっと誰かの力になります。共に学び、共に成長する仲間と出会うために、まずは会員登録から始めましょう。</p>
+        
+        <p id="form-title">以下の項目にご記入頂き、内容を確認の後、メールをお送りください。</p>
+
+        <button type="button" onclick="toggleLanguage('english')">En</button>
+        <button type="button" onclick="toggleLanguage('chinese')">Ch</button>
+        <button type="button" onclick="toggleLanguage('korean')">Ko</button>
+        <button type="button" onclick="toggleLanguage('japanese')">Ja</button>
+
+        <p id="name-label">お名前 <span class="required">(必須)</span><br />
+            <input type="text" name="your-name" placeholder="例）日本　一郎" required>
+        </p>
+
+        <p id="ruby-label">ふりがな <span class="required">(必須)</span><br />
+            <input type="text" name="your-ruby" placeholder="例）にほんいちろう" required>
+        </p>
+
+        <p id="birthday-label">生年月日 <span class="required">(必須)</span><br />
+            <input type="text" name="your-birthday" placeholder="例）2014/01/01" required>
+        </p>
+
+        <p id="tel-label">電話番号 <span class="required">(必須)</span><br />
+            <input type="tel" name="your-tel" placeholder="例）090-1234-5678" required>
+        </p>
+
+        <p id="email-label">メールアドレス <span class="required">(必須)</span><br />
+            <input type="email" name="your-email" placeholder="例）example@example.com" required>
+        </p>
+
+        <p id="zip-label">郵便番号 <span class="required">(必須)</span><br />
+            <input type="text" name="zip" id="zip" placeholder="例）123-4567" required>
+        </p>
+
+        <p id="addr-label">住所 <span class="required">(必須)</span><br />
+            <input type="text" name="addr" id="addr" placeholder="例）東京都渋谷区1-2-3" required>
+        </p>
+
+        <p id="education-label">最終学歴<span>(任意)</span><br />
+            <select class ="education" name="menu-education">
+                <option value="">選択してください</option>
+                <option value="大学院卒">大学院卒</option>
+                <option value="大学卒">大学卒</option>
+                <option value="高専卒">高専卒</option>
+                <option value="高校卒">高校卒</option>
+                <option value="専門学校卒">専門学校卒</option>
+                <option value="その他">その他</option>
+            </select>
+        </p>
+
+        <h4 style="margin:10px" id="career-label">職務経歴</h4>
+        <p id="company-label">社名<span>(任意)</span><br />
+            <input type="text" name="your-company">
+        </p>
+
+        <p id="job-desc-label">職務内容<span>(任意)</span><br />
+            <textarea name="your-job" rows="10"></textarea>
+        </p>
+
+        <p id="self-pr-label">自己PR<span class="required">(必須)</span><br />
+            <textarea name="your-self-pr" rows="10" required></textarea>
+        </p>
+
+        <p id="message-label">お問合せ内容 <span class="required">(必須)</span><br />
+            <textarea name="your-message" rows="10" required></textarea></p>
+
+        <form action="test.html" method="post" enctype="multipart/form-data">
+            <input type="file" name="test" onchange="previewFile(this);">
+        </form>
+
+        <p><button type="submit">入力内容を送信する</button></p>      
+        
+    </form>
+
+    <div class="left-sidebar sidebar">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="right-sidebar sidebar">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <script src="js/sidebar.js"></script>
+
+    <script>
+        function previewFile(FilePathFilePath){
+            var fileData = new FileReader();
+            fileData.onload = (function() {
+                document.getElementById('preview').src = fileData.result;
+            });
+            fileData.readAsDataURL(FilePathFilePath.files[0]);
+        }
+
+        function toggleLanguage(language) {
+            const text = {
+                japanese: {
+                    "core-task": "コア業務に集中が出来ない・・",
+                    "text-1": "仕事終わりの時間を、ただ過ごすだけではもったいない。あなたの得意分野やスキルを活かし、社会に価値を提供しませんか？今すぐ会員登録して、新しい可能性への一歩を踏み出しましょう。",
+                    "text-2": "終業後の2時間が、あなたの人生を変える時間になるかもしれません。ただの余暇ではなく、あなたのスキルで誰かの役に立つ時間へ。社会に貢献し、自分自身も成長できる場がここにあります。今すぐ会員登録を！",
+                    "text-3": "忙しい日常の中でも、終業後のわずかな時間を有効に活用することで、あなたの持つ知識や経験は誰かの助けになります。得意分野を活かして社会に貢献する、そんな充実感を味わえる場へ、ぜひご参加ください。",
+                    "text-4": "仕事の後の時間、もっと有意義に使えたら…』そんな想いはありませんか？あなたが培ってきたスキルや経験は、きっと誰かの力になります。共に学び、共に成長する仲間と出会うために、まずは会員登録から始めましょう。",
+                    "form-title": "以下の項目にご記入頂き、内容を確認の後、メールをお送りください。",
+                    "name-label": "お名前",
+                    "ruby-label": "ふりがな",
+                    "birthday-label": "生年月日",
+                    "tel-label": "電話番号",
+                    "email-label": "メールアドレス",
+                    "zip-label": "郵便番号",
+                    "addr-label": "住所",
+                    "education-label": "最終学歴",
+                    "career-label": "職務経歴",
+                    "company-label": "社名",
+                    "job-desc-label": "職務内容",
+                    "self-pr-label": "自己PR",
+                    "message-label": "お問合せ内容"
+                },
+                english: {
+                    "core-task": "Can't focus on core tasks...",
+                    "text-1": "It's a waste to just spend your time after work. Why not use your skills to make a difference and contribute to society? Register now and take the first step towards new possibilities.",
+                    "text-2": "The two hours after work could change your life. It's not just free time, but a chance to help someone with your skills. Contribute to society and grow personally. Register now!",
+                    "text-3": "Even in your busy routine, using the little time after work to help someone with your knowledge and experience can make a difference. Join us and enjoy the fulfillment of making a contribution.",
+                    "text-4": "Would you like to use your time after work more meaningfully? The skills and experiences you've developed will surely help someone. To meet like-minded individuals and grow together, start by registering today.",
+                    "form-title": "Please fill in the following items and send us an email after confirming your details.",
+                    "name-label": "Full Name",
+                    "ruby-label": "Furigana",
+                    "birthday-label": "Date of Birth",
+                    "tel-label": "Phone Number",
+                    "email-label": "Email Address",
+                    "zip-label": "Postal Code",
+                    "addr-label": "Address",
+                    "education-label": "Last Educational Background",
+                    "career-label": "Work History",
+                    "company-label": "Company Name",
+                    "job-desc-label": "Job Description",
+                    "self-pr-label": "Self-PR",
+                    "message-label": "Inquiry"
+                },
+                chinese: {
+                    "core-task": "无法专注于核心任务...",
+                    "text-1": "下班后的时间，浪费掉可惜。为什么不利用你的技能为社会做贡献？现在就注册，迈出通向新可能性的第一步。",
+                    "text-2": "下班后的两小时可能改变你的人生。这不仅仅是空闲时间，更是你通过技能帮助他人的时刻。为社会做贡献，并让自己成长，立即注册吧！",
+                    "text-3": "即使在忙碌的日常生活中，利用下班后的一点时间将你的知识和经验应用到帮助他人上，能产生不同。加入我们，享受为他人做贡献的满足感。",
+                    "text-4": "你是否想在下班后的时间里做些更有意义的事情？你所积累的技能和经验肯定能帮助到别人。通过注册加入我们，与志同道合的人一起成长。",
+                    "form-title": "请填写以下内容，确认后发送邮件。",
+                    "name-label": "姓名",
+                    "ruby-label": "读音",
+                    "birthday-label": "出生日期",
+                    "tel-label": "电话号码",
+                    "email-label": "电子邮件",
+                    "zip-label": "邮政编码",
+                    "addr-label": "地址",
+                    "education-label": "最后学历",
+                    "career-label": "工作经历",
+                    "company-label": "公司名称",
+                    "job-desc-label": "工作描述",
+                    "self-pr-label": "自我介绍",
+                    "message-label": "查询"
+                },
+                korean: {
+                    "core-task": "핵심 업무에 집중할 수 없다...",
+                    "text-1": "퇴근 후 시간을 그냥 보내는 것은 아깝습니다. 당신의 기술을 활용하여 사회에 기여할 수 있습니다. 지금 등록하고 새로운 가능성으로 나아가세요.",
+                    "text-2": "퇴근 후 두 시간이 당신의 삶을 변화시킬 수 있습니다. 그냥 여가가 아니라 당신의 기술로 누군가를 돕는 시간입니다. 사회에 기여하고 개인적으로 성장할 수 있는 기회가 여기에 있습니다. 지금 등록하세요!",
+                    "text-3": "바쁜 일상 속에서도 퇴근 후 잠깐의 시간을 활용하여 지식과 경험을 남에게 나누는 것은 큰 도움이 됩니다. 이곳에서 사회에 기여하고 성장할 수 있는 기회를 찾으세요.",
+                    "text-4": "퇴근 후 시간을 더 의미 있게 보내고 싶지 않으신가요? 당신이 쌓아온 기술과 경험은 분명 누군가에게 도움이 될 것입니다. 지금 바로 등록하여 함께 배우고 성장할 수 있는 기회를 얻어보세요.",
+                    "form-title": "다음 항목을 작성하신 후 이메일을 보내 주세요.",
+                    "name-label": "이름",
+                    "ruby-label": "후리가나",
+                    "birthday-label": "생년월일",
+                    "tel-label": "전화번호",
+                    "email-label": "이메일 주소",
+                    "zip-label": "우편번호",
+                    "addr-label": "주소",
+                    "education-label": "최종 학력",
+                    "career-label": "직무 경력",
+                    "company-label": "회사명",
+                    "job-desc-label": "직무 내용",
+                    "self-pr-label": "자기소개",
+                    "message-label": "문의 내용"
+                }
+            };
+
+            const langTexts = text[language];
+
+            for (const id in langTexts) {
+                document.getElementById(id).innerHTML = langTexts[id];
+            }
+        }
+    </script>
+</body>
+</html>

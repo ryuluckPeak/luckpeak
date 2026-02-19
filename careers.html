@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会員登録</title>
+    <link rel="stylesheet" href="css/careers.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="video/8.mp4" type="video/mp4">
+            お使いのブラウザは動画に対応していません。
+        </video>
+    </div>
+    <form action="send_Recruitment_mail.php" method="post">
+        
+        <div class="image-item">
+            <img src="img/win-text.jpg" alt="win-win">
+            <p class="image-text">コア業務に集中が出来ない・・</p>
+        </div>
+
+        <p>仕事終わりの時間を、ただ過ごすだけではもったいない。あなたの得意分野やスキルを活かし、社会に価値を提供しませんか？今すぐ会員登録して、新しい可能性への一歩を踏み出しましょう。</p>
+       
+        終業後の2時間が、あなたの人生を変える時間になるかもしれません。ただの余暇ではなく、あなたのスキルで誰かの役に立つ時間へ。社会に貢献し、自分自身も成長できる場がここにあります。今すぐ会員登録を！<br />
+        
+        忙しい日常の中でも、終業後のわずかな時間を有効に活用することで、あなたの持つ知識や経験は誰かの助けになります。得意分野を活かして社会に貢献する、そんな充実感を味わえる場へ、ぜひご参加ください。<br />
+
+        仕事の後の時間、もっと有意義に使えたら…』そんな想いはありませんか？あなたが培ってきたスキルや経験は、きっと誰かの力になります。共に学び、共に成長する仲間と出会うために、まずは会員登録から始めましょう。</p>
+        
+        以下の項目にご記入頂き、内容を確認の後、メールをお送りください。
+        後日担当者よりご連絡差し上げます。必須項目には必ずご記入頂く様お願い致します。
+
+        <p>お名前 <span class="required">(必須)</span><br />
+            <input type="text" name="your-name" placeholder="例）日本　一郎" required>
+        </p>
+        
+        <p>ふりがな <span class="required">(必須)</span><br />
+            <input type="text" name="your-ruby" placeholder="例）にほんいちろう" required>
+        </p>
+        
+        <p>生年月日 <span class="required">(必須)</span><br />
+            <input type="text" name="your-birthday" placeholder="例）2014/01/01" required>
+        </p>
+        
+        <p>電話番号 <span class="required">(必須)</span><br />
+            <input type="tel" name="your-tel" placeholder="例）090-1234-5678" required>
+        </p>
+        
+        <p>メールアドレス <span class="required">(必須)</span><br />
+            <input type="email" name="your-email" placeholder="例）example@example.com" required>
+        </p>
+        
+        <p>郵便番号 <span class="required">(必須)</span><br />
+            <input type="text" name="zip" id="zip" placeholder="例）123-4567" required>
+        </p>
+        
+        <p>住所 <span class="required">(必須)</span><br />
+            <input type="text" name="addr" id="addr" placeholder="例）東京都渋谷区1-2-3" required>
+        </p>
+        
+        <p>最終学歴<span>(任意)</span><br />
+            <select class ="education" name="menu-education">
+                <option value="">選択してください</option>
+                <option value="大学院卒">大学院卒</option>
+                <option value="大学卒">大学卒</option>
+                <option value="高専卒">高専卒</option>
+                <option value="高校卒">高校卒</option>
+                <option value="専門学校卒">専門学校卒</option>
+                <option value="その他">その他</option>
+            </select>
+        </p>
+        
+        <h4 style="margin:10px">職務経歴</h4>
+        <p>社名<span>(任意)</span><br />
+            <input type="text" name="your-company">
+        </p>
+        
+        <p>職務内容<span>(任意)</span><br />
+            <textarea name="your-job" rows="10"></textarea>
+        </p>
+
+        <p>自己PR<span class="required">(必須)</span><br />
+            <textarea name="" rows="10"></textarea>
+        </p>
+        
+        <p>お問合せ内容 <span class="required">(必須)</span><br />
+            <textarea name="your-message" rows="10" required></textarea></p>
+
+        　<form action="test.html" method="post" enctype="multipart/form-data" >
+           
+            <input type="file" name="test" onchange="previewFile(this);">
+          </form>
+          <p><button type="submit">入力内容を送信する</button></p>      
+          
+    </form>
+    <div class="left-sidebar sidebar">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        
+      </div>
+      
+      <div class="right-sidebar sidebar">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      
+      <script src="js/sidebar.js"></script>
+      　<script>
+        function previewFile(FilePathFilePath){
+          var fileData = new FileReader();
+          fileData.onload = (function() {
+            //id属性が付与されているimgタグのsrc属性に、fileReaderで取得した値の結果を入力することで
+            //プレビュー表示している
+            document.getElementById('preview').src = fileData.result;
+          });
+          fileData.readAsDataURL(FilePathFilePath.files[0]);
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動画の上に文字を表示</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/video.css">
+    <link rel="stylesheet" href="css/footer.css">
+   
+</head>
+<body>
+    <div class="demobox-header">
+        <span class="demobox-sitename">SiteName</span>
+    <!-- ↓ハンバーガーメニューここから↓ -->
+        <div class="hamburger-demo-menubox">
+            <input id="hamburger-demo4" type="checkbox" class="input-hidden">
+            <label for="hamburger-demo4" class="hamburger-demo-switch hamburger-demo-switch4">
+                <span class="hamburger-switch-circle"></span>
+            </label>
+            <div class="hamburger-demo-menuwrap hamburger-menuwrap-right">
+                <ul class="hamburger-demo-menulist hamburger-menulist-circle">
+                    <ul>
+                        <li>
+                          <a href="technorogy.html">
+                            <i class="fas fa-home"></i>
+                            <div class="menu-text">
+                              <span class="menu-en">HOME</span>
+                              <span class="menu-jp">ホーム</span>
+                            </div>
+                          </a>
+                        </li>
+                        
+                        <li>
+                          <a href="company.html">
+                            <i class="fas fa-building"></i>
+                            <div class="menu-text">
+                              <span class="menu-en">COMPANY</span>
+                              <span class="menu-jp">会社概要</span>
+                            </div>
+                          </a>
+                        </li>
+                      
+                        <li>
+                          <a href="#news-h3">
+                            <i class="fas fa-cogs"></i>
+                            <div class="menu-text">
+                              <span class="menu-en">SERVICES</span>
+                              <span class="menu-jp">事業内容</span>
+                            </div>
+                          </a>
+                        </li>
+                        
+                        <li>
+                          <a href="grid.html">
+                            <i class="fas fa-lightbulb"></i>
+                            <div class="menu-text">
+                              <span class="menu-en">SOLUTIONS</span>
+                              <span class="menu-jp">事例紹介</span>
+                            </div>
+                          </a>
+                        </li>
+                      
+                        <li>
+                          <a href="#">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="menu-text">
+                              <span class="menu-en">ACCESS</span>
+                              <span class="menu-jp">アクセス</span>
+                            </div>
+                          </a>
+                        </li>
+                      
+                        <li>
+                          <a href="careers.html">
+                            <i class="fas fa-users"></i>
+                            <div class="menu-text">
+                              <span class="menu-en">Careers</span>
+                              <span class="menu-jp">採用情報</span>
+                            </div>
+                          </a>
+                        </li>
+                      
+                        <li>
+                          <a href="contact.html">
+                            <i class="fas fa-envelope"></i>
+                            <div class="menu-text">
+                              <span class="menu-en">CONTACT</span>
+                              <span class="menu-jp">お問い合わせ</span>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                      
+            </div>
+            <div class="hamburger-demo-cover"></div>
+        </div>
+    <!-- ↑ハンバーガーメニューここまで↑ -->
+    </div>
+      <div class="video-container">
+        <video id="videoPlayer" autoplay muted>
+            <source id="videoSource" src="video/202502_01.mp4" type="video/mp4">
+        </video>
+        <div id="textLeft" class="overlay-text left-text">
+            ロボット工場では、製造ラインの自動化を進め、ロボットの組み立て、調整、品質管理を徹底的に行っています。
+            各工程では高精度な作業が要求され、プログラム設定や定期的なメンテナンスを通じて、
+            効率的かつ安定した生産体制を確立しています。これにより、品質向上と生産性の最大化が実現されています。
+        </div>
+        <div id="textRight" class="overlay-text right-text">
+            最先端技術は、私たちの生活を革新し、効率性や利便性を大幅に向上させます。
+            AI、ロボット、IoTなどの進化により、仕事や日常が変わり、より豊かな未来を築く力を持っています。
+            これらの技術が社会全体に新たな可能性を提供し、生活の質を向上させることで、次世代の豊かな世界が実現します。
+        </div>
+        <div id="textCenter" class="overlay-text center-text">未来を変えるテクノロジー、世界を豊かに</div>
+    </div>
+
+    <script src ="js\video.js"></script>
+</body>
+<footer id="footer">
+    <section class="primary">
+      <div class="flex">
+        <div class="left">
+          <p class="logo"><a href="#">トリビストロン株式会社</a></p>
+          <p class="address">
+            〒450-8711 愛知県名古屋市中村区名駅4丁目8番<br>
+            TEL : 123-456-9999　/　FAX : 123-456-0000
+          </p>
+          <ul class="sns-navi">
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <div class="navi-section">
+            <p class="parent"><a href="#">導入事例</a></p>
+            <ul class="navi">
+              <li><a href="#">a社</a></li>
+              <li><a href="#">B社</a></li>
+              <li><a href="#">商品C</a></li>
+              <li><a href="#">商品D</a></li>
+            </ul>
+          </div>
+          <div class="navi-section">
+            <p class="parent"><a href="#">企業情報</a></p>
+            <ul class="navi">
+              <li><a href="#">会社案内</a></li>
+              <li><a href="suraid.html">事業内容</a></li>
+              <li><a href="#">IR</a></li>
+              <li><a href="#">CSR</a></li>
+              <li><a href="#">採用情報</a></li>
+            </ul>
+          </div>
+          <div class="navi-section">
+            <p class="parent"><a href="#">問題解決方法</a></p>
+            <p class="parent"><a href="#">会員制登録</a></p>
+            <p class="parent"><a href="Inquiries.html">お問い合わせ</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="secondary">
+      <ul class="sitenavi">
+        <li><a href="#">サイトマップ</a></li>
+        <li><a href="#">プライバシーポリシー</a></li>
+      </ul>
+      <p class="copyright">Copyright WEBSITE,Inc. All rights reserved.</p>
+    </section>
+  </footer>
+  
+</html>

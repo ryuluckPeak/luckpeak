@@ -1,0 +1,314 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: auto;
+}
+
+.video-container {
+    top:40px;
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* 最低でも画面全体の高さを確保 */
+    display: flex;
+    flex-direction: column; /* 子要素を縦並びに */
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(11, 3, 83);
+}
+
+video {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    transform: scaleX(1.5);
+    border-radius: 20px; /* 角丸を適用 */
+    overflow: hidden; /* 角丸を確実に反映させる */
+}
+
+.overlay-text {
+    position: absolute;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(11, 15, 141, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    max-width: 40%;
+    font-family: 'Poppins', sans-serif;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.left-text {
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 25%;
+}
+
+.right-text {
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 25%;
+}
+
+.center-text {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60%;
+    background: transparent;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
+    video {
+        height: 300px;
+    }
+
+    .overlay-text {
+        font-size: 16px;
+        padding: 8px 16px;
+        max-width: 80%;
+    }
+
+    .left-text, .right-text {
+        max-width: 40%;
+    }
+
+    .center-text {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .overlay-text {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .left-text, .right-text {
+        max-width: 50%;
+    }
+
+    .center-text {
+        max-width: 90%;
+    }
+}
+
+footer {
+    width: 100%;
+    clear: both;
+    position: relative;
+}
+
+/* header（デモの参考値） */
+.demobox-header{
+	background: #ddd;
+	height: 64px;
+	padding: 1em;
+}
+.demobox-sitename{
+	font-weight: 700;
+	font-size: 18px;
+}
+/* 全体調整CSS */
+.hamburger-demo-menubox *{
+	font-size: 16px;
+}
+.hamburger-demo-menubox li{
+	font-size: 14px;
+}
+/* hamburgerここから */
+	/* input非表示 */
+.input-hidden{
+	display: none;
+}
+	/* label */
+.hamburger-demo-switch{
+	cursor: pointer;
+	position: absolute;
+	right: 3%;
+	top: 0;
+	z-index: 9999;
+	width: 4em;
+	height: 4em;
+}
+/* メニュー展開時にハンバーガーアイコンを固定 */
+#hamburger-demo4:checked ~ .hamburger-demo-switch{
+	position: fixed;
+}
+/* 円を用いたハンバーガーデザイン */
+	/* 外側の円 */
+.hamburger-demo-switch4:before{
+	content: "";
+	position: absolute;
+	width: 3em;
+	height: 3em;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid #f00404; /* 外側の円（枠線）の色 */
+	border-radius: 50%;
+}
+	/* 真ん中の円 */
+.hamburger-switch-circle{
+	height: 3px;
+	width: 25px;
+	background: #fb0202; /* 真ん中の線（円）の色 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: .3s;
+}
+	/* 上下の線 */
+.hamburger-switch-circle:before, .hamburger-switch-circle:after{
+	content: "";
+	position: absolute;
+	width: 25px;
+	top: 50%;
+	left: 50%;
+	transition: .3s;
+}
+.hamburger-switch-circle:before{
+	border-top: 3px solid #fc0303; /* ハンバーガーアイコン上側の線の色 */
+	transform: translate(-50%, -300%);
+}
+.hamburger-switch-circle:after{
+	border-bottom: 3px solid #f30303; /* ハンバーガーアイコン下側の線の色 */
+	transform: translate(-50%, 200%);
+}
+/* アイコン･アニメーション */
+#hamburger-demo4:checked ~ .hamburger-demo-switch .hamburger-switch-circle{
+	height: 25px;
+	border-radius: 50%;
+}
+#hamburger-demo4:checked ~ .hamburger-demo-switch .hamburger-switch-circle:before{
+	width: 0;
+}
+#hamburger-demo4:checked ~ .hamburger-demo-switch .hamburger-switch-circle:after{
+	width: 0;
+}
+	/* 真ん中の×印 */
+.hamburger-demo-switch4:after{
+	content: "×";
+	font-size: 0px;
+	position: absolute;
+	color: #fff; /* ハンバーガーの"×"マークの色 */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: .2s;
+}
+#hamburger-demo4:checked ~ .hamburger-demo-switch4:after{
+	font-size: 25px;
+}
+/* メニューエリア */
+.hamburger-demo-menuwrap{
+	position: fixed;
+	height: 100%;
+	background: #fafafa; /* メニューエリアの背景色 */
+	padding: 5em 3% 2em;
+	z-index: 9998;
+	transition: .3s;
+	overflow-y: scroll; /* メニュー内容が多い場合に縦スクロール */
+	top: 0;
+	left: 100%;
+	width: 70%;
+}
+/* メニューリスト */
+.hamburger-demo-menulist{
+	margin-right: 3%;
+	padding-left: 5% !important; /* !important不要な場合あり */
+	list-style: none;
+}
+.hamburger-demo-menulist li a{
+	text-decoration: none;
+	color: #e90303; /* メニューエリアの文字色 */
+	display: block;
+}
+	/* 円を用いたメニューリスト */
+.hamburger-menulist-circle li{
+	border: 1px solid;
+	margin-bottom: 5px;
+	border-radius: 2em;
+}
+.hamburger-menulist-circle li a{
+	padding: .5em 2.5em .5em 1em;
+	position: relative;
+}
+.hamburger-menulist-circle a:before{
+	content: "";
+	position: absolute;
+	width: 1.5em;
+	height: 1.5em;
+	background: #ec0202; /* メニューリスト矢印背景（円）の色 */
+	border-radius: 50%;
+	top: 50%;
+	right: .5em;
+	transform: translate(0, -50%);
+}
+.hamburger-menulist-circle a:after{
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: 2.5px solid;
+	border-color: #fff #fff transparent transparent; /* メニューリスト矢印の色（#fffのみ変更） */
+	top: 50%;
+	right: .5em;
+	transform: translate(-80%, -50%) rotate(45deg);
+}
+/* メニューエリア･アニメーション */
+	/* 右から */
+#hamburger-demo4:checked ~ .hamburger-demo-menuwrap{
+	left: 30%;
+ 
+
+}
+	/* コンテンツカバー */
+#hamburger-demo4:checked ~ .hamburger-demo-cover{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9997;
+	background: rgba(3,3,3,.5);
+	display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li a {
+    display: flex;
+    align-items: center; /* アイコンと2行のテキストを中央揃え */
+    gap: 12px; /* アイコンとテキストの間隔 */
+    text-decoration: none;
+  }
+  
+  i {
+    font-size: 20px; /* アイコンのサイズ */
+    color: #f00a0a; /* アイコンの色 */
+    width: 24px; /* アイコンの固定幅 */
+    text-align: center;
+  }
+  
+  .menu-text {
+    display: flex;
+    flex-direction: column; /* 2行のテキストを縦に並べる */
+    justify-content: center; /* 文字を中央に揃える */
+    line-height: 1.2; /* テキスト間の高さ調整 */
+  }
+  
+  .menu-en, .menu-jp {
+    display: block;
+  }
+  

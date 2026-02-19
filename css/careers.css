@@ -1,0 +1,185 @@
+/* ページ全体の表示設定 */
+body {
+    display: flex;
+    flex-direction: column; /* 垂直方向に配置 */
+    justify-content: flex-start; /* 上部に配置 */
+    align-items: center; /* 水平方向に中央揃え */
+    min-height: 100vh;
+    margin: 0;
+    background-color: transparent; /* 完全に透明に変更 */
+    font-family: Arial, sans-serif;
+}
+
+/* 左寄せテキストのスタイル */
+.left-align-text {
+    text-align: left; /* 左寄せ */
+    margin: 0; /* マージンを削除 */
+    max-width: 800px; /* 最大幅 */
+    padding: 20px; /* 内側余白 */
+    background-image: url('../img/win_win.jpg'); /* 画像を指定 */
+    background-size: cover; /* 画像を要素のサイズに合わせて拡大・縮小 */
+    background-position: center center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像が繰り返されないように設定 */
+    box-shadow: 0 4px 8px rgba(245, 2, 2, 0.1); /* 影を追加 */
+    color: #ffffff; /* 文字色を白に設定 */
+}
+
+
+/* フォームのスタイル */
+form {
+    width: 100%;
+    max-width: 800px; /* 最大幅 */
+    padding: 20px;
+    background-color: transparent; /* 完全に透明に変更 */
+    box-shadow: 0 4px 6px rgba(204, 3, 3, 0.1); /* ボックスシャドウ */
+    border-radius: 8px; /* 角を丸くする */
+    margin-top: 20px; /* 上部の余白 */
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+input, textarea, select {
+    width: 95%; /* 全幅表示 */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1.5px solid #c30505;
+    border-radius: 0;
+    font-size: 14px;
+    background-color: transparent; /* 完全に透明に変更 */
+}
+
+.education{
+    width: 97.5%;
+}
+
+button {
+    background-color: #007bff; /* ボタン背景色 */
+    color: #ffffff; /* ボタン文字色 */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* ボタンホバー色 */
+}
+
+.required {
+    color: red;
+}
+
+/* ラジオボタンとテキストを水平に配置 */
+.radio-group {
+    display: flex; /* ラジオボタン全体を横並びにする */
+    gap: 20px; /* 各ラベル間の余白 */
+}
+
+.radio-group label {
+    display: flex; /* ラジオボタンとテキストを並べる */
+    align-items: center; /* ラジオボタンとテキストを垂直方向に揃える */
+    gap: 5px; /* ボタンとテキスト間の余白 */
+    cursor: pointer; /* ラベルをクリック可能に */
+}
+
+input[type="radio"] {
+    margin: 0; /* デフォルト余白を除去 */
+}
+
+/* ビデオ再生する */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.video-container {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    z-index: -1; /* 背景に配置 */
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 動画を全画面にフィットさせる */
+}
+
+/* フォームコンテナの位置指定 */
+.form-container {
+    position: relative;
+    z-index: 1; /* フォームを前面に表示 */
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+    padding: 20px;
+    margin-top: 20px; /* フォームの上部に余白 */
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 動画を背景として設定 */
+.video-background {
+    position: fixed; /* 固定位置 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* 他の要素より後ろに表示 */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 動画を全画面にフィットさせる */
+}
+
+/* スマホ表示対応 */
+@media (max-width: 768px) {
+    .left-align-text {
+        max-width: 100%; /* 最大幅を画面幅に合わせる */
+        padding: 10px; /* 内側余白の調整 */
+    }
+
+    form {
+        max-width: 100%; /* 最大幅を画面幅に合わせる */
+        padding: 15px; /* 内側余白の調整 */
+    }
+
+    .form-container {
+        max-width: 100%; /* 最大幅を画面幅に合わせる */
+        padding: 10px; /* 内側余白の調整 */
+    }
+
+    .video-container {
+        height: 100vh; /* ビデオの高さを画面全体に調整 */
+    }
+
+    button {
+        font-size: 16px; /* ボタンの文字サイズを少し大きく */
+    }
+
+    .radio-group {
+        flex-direction: column; /* ラジオボタンを縦並びに */
+        gap: 10px; /* 間隔を少し縮める */
+    }
+
+    input, textarea, select {
+        font-size: 16px; /* フォーム要素の文字サイズを調整 */
+    }
+}
+
+/*その他と主な共通部分は省略*/
+
+.image-item img {
+    width: 1200px; /* 画像の幅を指定 */
+    height: 150px; /* アスペクト比を維持して高さを自動調整 */
+    max-width: 100%; /* 親コンテナより大きくならないように制限 */
+    border-radius: 10px; /* 画像の角を少し丸める */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 軽い影を追加 */
+    object-fit: cover; /* 必要に応じて画像のトリミング */
+  }
