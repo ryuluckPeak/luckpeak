@@ -576,6 +576,9 @@ h3::after {
   font-family: 'Elixia', sans-serif; /* Elixiaフォントを指定 */
   color: white; /* 必要に応じて文字色を指定 */
   text-align: center; /* 中央揃え */
+  position: relative;
+  z-index: 1;          /* ← 文字を前面に出さない */
+  pointer-events: none; /* ← クリックを通す（重要） */
 }
 
 .caption h1,
