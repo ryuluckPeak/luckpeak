@@ -673,7 +673,7 @@ h3::after {
   background: transparent;
   padding: 20px;
   max-width: 80%;
-  z-index: 0; /* 画像と同じレイヤーに配置 */
+  
 }
 
 
