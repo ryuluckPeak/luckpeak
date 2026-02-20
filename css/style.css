@@ -545,8 +545,13 @@ h3::after {
 /* スマホ対応スタイル */
 @media (max-width: 768px) {
   .language-nav {
-    flex-direction: row; /* ボタンを水平に並べる */
-    align-items: center; /* 水平方向に中央揃え */
+    /* flex-direction: row; ボタンを水平に並べる */
+    /*align-items: center;  水平方向に中央揃え */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2列 */
+    gap: 10px; /* ボタン間の余白 */
+    justify-content: center;
+    padding: 0 10px;
   }
 
   .language-nav button {
