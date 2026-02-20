@@ -268,38 +268,3 @@ h4 {
     font-size: 1.2rem;
   }
 }
-.circle a:nth-child(1) {
-  top: 50%;
-  left: 50%;
-  transform: rotate(0deg) translate(120px) rotate(0deg);
-}
-
-.circle a:nth-child(2) {
-  top: 50%;
-  left: 50%;
-  transform: rotate(60deg) translate(120px) rotate(-60deg);
-}
-
-.circle a:nth-child(3) {
-  top: 50%;
-  left: 50%;
-  transform: rotate(120deg) translate(120px) rotate(-120deg);
-}
-
-.circle a:nth-child(4) {
-  top: 50%;
-  left: 50%;
-  transform: rotate(180deg) translate(120px) rotate(-180deg);
-}
-
-.circle a:nth-child(5) {
-  top: 50%;
-  left: 50%;
-  transform: rotate(240deg) translate(120px) rotate(-240deg);
-}
-
-.circle a:nth-child(6) {
-  top: 50%;
-  left: 50%;
-  transform: rotate(300deg) translate(120px) rotate(-300deg);
-}
