@@ -233,38 +233,32 @@ h4 {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { /* 更に小さい画面用の調整 */ 
+.circular-menu { 
+ width: 150px; 
+ height: 150px; 
+} 
 
-  /* メニュー全体 */
-  .circular-menu {
-    width: 220px;
-    height: 220px;
-  }
+.circle { 
+ width: 150px; 
+ height: 150px; 
+} 
 
-  .circle {
-    width: 220px;
-    height: 220px;
-  }
+.circle a {
+ height: 20px; 
+ width: 20px; 
+ line-height: 20px; 
+ font-size: 0.8rem;
+ } 
 
-  /* アイコン（重要） */
-  .circle a {
-    height: 48px;
-    width: 48px;
-    line-height: 48px;
-    font-size: 1.2rem;
-  }
+.menu-button {
+ height: 25px; 
+ width: 25px; 
+ line-height: 25px; 
+ padding: 5px; 
+} 
 
-  /* 中央ボタン */
-  .menu-button {
-    height: 60px;
-    width: 60px;
-    line-height: 60px;
-    padding: 10px;
-    font-size: 1.2rem;
-  }
-
-  /* タイトル */
-  .title, h3, h2, h4 {
-    font-size: 1.2rem;
-  }
+.title, h3, h2, h4 {
+ font-size: 1rem; 
+} 
 }
