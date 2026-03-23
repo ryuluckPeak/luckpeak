@@ -30,8 +30,28 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     h2 {
-      border-left: 5px solid #4facfe;
-      padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+h2::before {
+  content: "";
+  width: 5px;
+  height: 24px;
+  background: #4facfe;
+}
+    h3 {
+      width: 400px;
+      margin: 40px auto 0;
+      text-align: left;
+      color: #4facfe;
+    }
+    .catch {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ff2d75;  /* 濃いピンク */
     }
     ul {
       line-height: 1.8;
@@ -69,6 +89,14 @@
       font-size: 14px;
       color: #777;
     }
+  .container {
+  text-align: center;
+}
+
+ul {
+  display: inline-block;
+  text-align: left;
+}
   </style>
 </head>
 <body>
@@ -81,33 +109,72 @@
 <div class="container">
   
   <h2>サービス内容</h2>
+
+  <h3>■ IT相談（IT導入・改善支援）</h3>
+  <p class="catch">「何をすればいいか分からない」を解決</p>
   <ul>
-    <li>IT相談（IT導入・改善のアドバイス）</li>
-    <li>Excel改善（業務効率化・自動化）</li>
-    <li>システム要件定義（開発前の整理・設計）</li>
-    <li>開発管理（外注・進行管理・品質チェック）</li>
+    <li>現状業務のムダ・非効率を見える化</li>
+    <li>最適なITツール選定（会計・顧客管理・業務管理）</li>
+    <li>IT導入の失敗回避（無駄な投資を防止）</li>
+    <li>セカンドオピニオン対応（業者提案チェック）</li>
+  </ul>
+
+  <h3>■ Excel改善（業務効率化・自動化）</h3>
+  <p class="catch">「毎日の手作業をゼロへ」</p>
+  <ul>
+    <li>手作業業務の自動化（関数・マクロ・VBA）</li>
+    <li>繰り返し業務の自動化（集計・転記・加工）</li>
+    <li>作業時間の大幅削減（数時間 → 数分）</li>
+    <li>入力ミス防止・チェック機能の実装</li>
+    <li>既存ファイルの改善・軽量化</li>
+    <li>属人化の解消（誰でも使える仕組み化）</li>
+  </ul>
+
+  <h3>■ システム要件定義（失敗しない開発設計）</h3>
+  <p class="catch">「開発の失敗を未然に防ぐ」</p>
+  <ul>
+    <li>現場ヒアリングによる業務整理</li>
+    <li>業務フローの可視化（ムダの洗い出し）</li>
+    <li>システム仕様書の作成（そのまま開発可能）</li>
+    <li>開発前のリスク・抜け漏れ防止</li>
+  </ul>
+
+  <h3>■ 開発管理（外注・進行・品質管理）</h3>
+  <p class="catch">「丸投げでも安心して任せられる」</p>
+  <ul>
+    <li>外注先とのやり取りを代行</li>
+    <li>スケジュール管理・進行コントロール</li>
+    <li>成果物チェック（品質・仕様確認）</li>
+    <li>トラブル・遅延の早期対応</li>
   </ul>
 
   <h2>料金プラン</h2>
   <table>
     <tr>
       <th>プラン</th>
+      <th>内容</th>
       <th>料金</th>
     </tr>
     <tr>
       <td>IT相談</td>
-      <td>月額 50,000円</td>
+      <td>月2回（60分）＋チャット相談</td>
+      <td>月額 30,000円</td>
     </tr>
     <tr>
       <td>DX支援</td>
+      <td>月4回（週1回）＋チャット無制限＋Excel改善</td>
       <td>月額 100,000円</td>
     </tr>
     <tr>
       <td>システム顧問</td>
+      <td>回数無制限＋優先対応＋要件定義・開発管理込み</td>
       <td>月額 200,000円</td>
     </tr>
   </table>
 
+  <div class="cta">
+    <a href="contact.html">お問い合わせはこちら</a>
+  </div>
 
 </div>
 
